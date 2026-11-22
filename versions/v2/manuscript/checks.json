@@ -1,0 +1,423 @@
+{
+  "arithmetic": "exact integers and rational numbers",
+  "array_columns": [
+    0,
+    24
+  ],
+  "array_rows": [
+    1,
+    24
+  ],
+  "corrected_A181079_cross_reference": {
+    "A181077": 59,
+    "A181079": 95,
+    "correct_exponential": "A181078",
+    "identity": "sum(A181079(m)*x^m,m>=1)=x*A181078_prime(x)/A181078(x)",
+    "index": 4
+  },
+  "families": {
+    "A166894": {
+      "array_checks": 3600,
+      "coefficient_sha256": "0eb86a69834219949f77ed24296ba525c7e915246d9f31371d915b6f435b2764",
+      "degrees": [
+        0,
+        48
+      ],
+      "direct_exponential_degrees": [
+        0,
+        16
+      ],
+      "euler_exponent_sha256": "395ffd28d02f360dd1dd557f20fe70438d57caad2e12d7aac61f2ef2d34a78ae",
+      "ghost_checks": 62,
+      "logarithmic_coefficient_sha256": "6e72820f6fabccf3d2443e140a73983461d868ef64eb1cfea469ed3f9eb3a756",
+      "logarithmic_prefix": [
+        "1",
+        "3",
+        "7",
+        "39",
+        "366",
+        "5697",
+        "194881",
+        "16288695"
+      ],
+      "logarithmic_sequence": "A166895",
+      "oeis_prefix": [
+        1,
+        1,
+        2,
+        4,
+        14,
+        89,
+        1050,
+        28983,
+        2066217
+      ]
+    },
+    "A181070": {
+      "array_checks": 3600,
+      "coefficient_sha256": "b1988d546a743aa1a82c747d9de20a61e86e9d9f6675c8492ceabe07cd08f824",
+      "degrees": [
+        0,
+        48
+      ],
+      "direct_exponential_degrees": [
+        0,
+        16
+      ],
+      "euler_exponent_sha256": "60817b08741dffffbd2114e5e8adb9c8fc8fdcd54693ef057abc2ed5bed58bb2",
+      "ghost_checks": 62,
+      "logarithmic_coefficient_sha256": "cbf53121ad27021623e66b1d086157640f8c7867c348e9d81c063eb69ac10b3b",
+      "logarithmic_prefix": [
+        "1",
+        "3",
+        "7",
+        "15",
+        "66",
+        "357",
+        "1891",
+        "20559"
+      ],
+      "logarithmic_sequence": "A181071",
+      "oeis_prefix": [
+        1,
+        1,
+        2,
+        4,
+        8,
+        23,
+        88,
+        379,
+        3044
+      ]
+    },
+    "A181074": {
+      "array_checks": 3600,
+      "coefficient_sha256": "b559ade8659e66081cbac46003240a0ffcc73d32512480d819925302b0c076dc",
+      "degrees": [
+        0,
+        48
+      ],
+      "direct_exponential_degrees": [
+        0,
+        16
+      ],
+      "euler_exponent_sha256": "7fc1687fd38b77282297cb9005c6172eb8fb7124612ac386997ab0a36c472ff4",
+      "ghost_checks": 62,
+      "logarithmic_coefficient_sha256": "02c8ac4f7417da6b3a1f88f6a23c5591fd5ec07ffff340c8e63e11b1c86a0dee",
+      "logarithmic_prefix": [
+        "1",
+        "3",
+        "10",
+        "71",
+        "1026",
+        "30912",
+        "2219946",
+        "339460991"
+      ],
+      "logarithmic_sequence": "A181075",
+      "oeis_prefix": [
+        1,
+        1,
+        2,
+        5,
+        23,
+        231,
+        5405,
+        322799,
+        42761356
+      ]
+    },
+    "A181076": {
+      "array_checks": 3600,
+      "coefficient_sha256": "46dd607e1f48dab0b1b0a7ded33bb6450aa29fdaba676a24ca537cf5957f2fd4",
+      "degrees": [
+        0,
+        48
+      ],
+      "direct_exponential_degrees": [
+        0,
+        16
+      ],
+      "euler_exponent_sha256": "a8127815b090038bca5092dfd05fbe6264b3661fb7203299256c070d8fb72cf1",
+      "ghost_checks": 62,
+      "logarithmic_coefficient_sha256": "862d10e90a67cd407a8c9112d1437a6b733571b68da1fd19c0a225a6c20a9ea0",
+      "logarithmic_prefix": [
+        "1",
+        "3",
+        "10",
+        "59",
+        "726",
+        "20832",
+        "1405566",
+        "202357171"
+      ],
+      "logarithmic_sequence": "A181077",
+      "oeis_prefix": [
+        1,
+        1,
+        2,
+        5,
+        20,
+        168,
+        3659,
+        204644,
+        25503314
+      ]
+    },
+    "A181078": {
+      "array_checks": 3600,
+      "coefficient_sha256": "5fc13af3ba9cf53a11efc063a4c1d63d0d8d53354b8f41bf39f17f9b4d7a19d2",
+      "degrees": [
+        0,
+        48
+      ],
+      "direct_exponential_degrees": [
+        0,
+        16
+      ],
+      "euler_exponent_sha256": "b27ce953a450e0b0d1e211d1274989064420f8fb8aa1ad3b2fcca929e0e5ac65",
+      "ghost_checks": 62,
+      "logarithmic_coefficient_sha256": "6bdea684404e1b56b4e6373f5769355d27e1671003872e9ad2bf725c257b0931",
+      "logarithmic_prefix": [
+        "1",
+        "3",
+        "10",
+        "95",
+        "3126",
+        "363132",
+        "154742736",
+        "238830058287"
+      ],
+      "logarithmic_sequence": "A181079",
+      "oeis_prefix": [
+        1,
+        1,
+        2,
+        5,
+        29,
+        657,
+        61207,
+        22168009,
+        29875987984
+      ]
+    },
+    "A181080": {
+      "array_checks": 3600,
+      "coefficient_sha256": "d5778ee8e100c77306f688ff0dca524b36eeb7df24d661f3dd35233a84cd3ae3",
+      "degrees": [
+        0,
+        48
+      ],
+      "direct_exponential_degrees": [
+        0,
+        16
+      ],
+      "euler_exponent_sha256": "ccfd4b24311d1bcd4e2890c0743e145f5cc133386630f7aa1f0ece87b517ff16",
+      "ghost_checks": 62,
+      "logarithmic_coefficient_sha256": "0a169863c714028b9f182a40fae87bf0cbe0dad78302514cac49a05f7f942150",
+      "logarithmic_prefix": [
+        "1",
+        "3",
+        "7",
+        "39",
+        "336",
+        "4077",
+        "68461",
+        "1955295"
+      ],
+      "logarithmic_sequence": "A181081",
+      "oeis_prefix": [
+        1,
+        1,
+        2,
+        4,
+        14,
+        83,
+        774,
+        10641,
+        255918
+      ]
+    },
+    "A181082": {
+      "array_checks": 3600,
+      "coefficient_sha256": "10b27366df31f627cd202f63d0aca2a0c8187355aac29eaed82a1061caa775ac",
+      "degrees": [
+        0,
+        48
+      ],
+      "direct_exponential_degrees": [
+        0,
+        16
+      ],
+      "euler_exponent_sha256": "6532eb41320ba2de9a2e9f363edca7cb82e60f12d6ebb06ede91e2726faf1ab8",
+      "ghost_checks": 62,
+      "logarithmic_coefficient_sha256": "381c53f9f6481ebfe40218696444dc1ab432dbe14b28f3657378b695ed4c70c4",
+      "logarithmic_prefix": [
+        "1",
+        "3",
+        "13",
+        "111",
+        "1686",
+        "88737",
+        "14355265",
+        "3583775847"
+      ],
+      "logarithmic_sequence": "A181083",
+      "oeis_prefix": [
+        1,
+        1,
+        2,
+        6,
+        34,
+        375,
+        15200,
+        2066401,
+        450054919
+      ]
+    },
+    "A181084": {
+      "array_checks": 3600,
+      "coefficient_sha256": "b5913893e760c4cff964c317da978a17026b0cd821d6ed0fbfb68c125c9feaa8",
+      "degrees": [
+        0,
+        48
+      ],
+      "direct_exponential_degrees": [
+        0,
+        16
+      ],
+      "euler_exponent_sha256": "b54999ab7ad8ea1957ecf5fc86e6300395f91dd5ab77d0e194bd22509f47f2b7",
+      "ghost_checks": 62,
+      "logarithmic_coefficient_sha256": "bae34a7113fe88d790d4570f146dc2c79c80eb9be6e58a887df2c590d13ffce5",
+      "logarithmic_prefix": [
+        "1",
+        "3",
+        "25",
+        "327",
+        "6336",
+        "513657",
+        "142074241",
+        "52903930911"
+      ],
+      "logarithmic_sequence": "A181085",
+      "oeis_prefix": [
+        1,
+        1,
+        2,
+        10,
+        92,
+        1367,
+        87090,
+        20385333,
+        6633475836
+      ]
+    }
+  },
+  "linear_exponent_families": {
+    "coefficient_degree": 12,
+    "columns": [
+      0,
+      12
+    ],
+    "integral_exponential_checks": 21,
+    "parameters_r_s_delta": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        2,
+        2
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        2,
+        3,
+        -1
+      ]
+    ],
+    "prime_scaling_checks": 4914,
+    "primes": [
+      2,
+      3,
+      5
+    ],
+    "rows": [
+      1,
+      6
+    ],
+    "series": [
+      "1+t+t^2",
+      "1+2t+t^3",
+      "1/(1-t)"
+    ]
+  },
+  "nonintegral_comparisons": {
+    "A181070": {
+      "coefficient": "45/2",
+      "first_nonintegral_degree": 6,
+      "ghost_prefix": [
+        "1",
+        "3",
+        "4",
+        "7",
+        "21",
+        "63"
+      ]
+    },
+    "A181074": {
+      "coefficient": "1481/2",
+      "first_nonintegral_degree": 6,
+      "ghost_prefix": [
+        "1",
+        "3",
+        "7",
+        "27",
+        "231",
+        "4038"
+      ]
+    },
+    "A181080": {
+      "coefficient": "327/2",
+      "first_nonintegral_degree": 6,
+      "ghost_prefix": [
+        "1",
+        "3",
+        "4",
+        "15",
+        "86",
+        "807"
+      ]
+    }
+  },
+  "primes": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13
+  ],
+  "scope": "Finite coefficient, Euler-product and congruence checks; the unbounded statements have written proofs in note.tex."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "hanna-a181080-integrality",
+  "revision": 2,
+  "problem_ids": ["hanna181080", "hanna181070", "hanna181074"],
+  "topic": "Hanna's OEIS A181080 integrality conjecture and binomial-power companion series",
+  "title": "Proof of Hanna's conjecture in OEIS A181080, COMMENTS, first line: integrality and binomial-power companions",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "We prove Paul D. Hanna's integrality conjecture in OEIS A181080, COMMENTS, first line (2 October 2010), for the series specified in NAME: exp(sum over n>=1 and 0<=k<=n of binomial(n,k)^(n-k+1) x^(n+k)/n) has integer coefficients. Prime-scaling congruences for binomial coefficients imply Dold congruences for its logarithmic derivative. The same argument proves the related assertions for A181070, A181074, A181076, A181078, A181082, A181084 and A166894, and gives integer logarithmic sequences in all eight cases. A linear-exponent extension applies to powers of any nonnegative integral series with constant term one. We also verify Hanna's three nonintegral comparison series and correct the exponential cross-reference in A181079.",
+  "summary": "All-degree written proofs for eight integral exponentials, eight associated logarithmic sequences and three linear-exponent families; exact degree-six nonintegrality witnesses confirm three comparison statements. The A181079 logarithmic sequence belongs to A181078, not A181076. Three pinned Lean result declarations cover A181080, A181070 and A181074; the additional statements have written proofs and bounded exact-arithmetic checks.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/abb48f723fe221da235c625800ba0d2ca1755296/D5/S1/Recurrence/Algebraic/HannaA181080Integrality.lean"
+}

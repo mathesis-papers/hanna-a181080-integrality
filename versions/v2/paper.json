@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 89530,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "3d543dd925e0538c57b559fbc432ffdfaca7f9c41b8c8cc9fa2af80598a4378e",
+      "sha256": "3d543dd925e0538c57b559fbc432ffdfaca7f9c41b8c8cc9fa2af80598a4378e"
+    },
+    "source": {
+      "bytes": 16697,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "5224bbb10b7fc6365983eb6182c02e615ccb594666b388b84c11a9591a8a7d77",
+      "sha256": "5224bbb10b7fc6365983eb6182c02e615ccb594666b388b84c11a9591a8a7d77"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "We prove Paul D. Hanna's integrality conjecture in OEIS A181080, COMMENTS, first line (2 October 2010), for the series specified in NAME: exp(sum over n>=1 and 0<=k<=n of binomial(n,k)^(n-k+1) x^(n+k)/n) has integer coefficients. Prime-scaling congruences for binomial coefficients imply Dold congruences for its logarithmic derivative. The same argument proves the related assertions for A181070, A181074, A181076, A181078, A181082, A181084 and A166894, and gives integer logarithmic sequences in all eight cases. A linear-exponent extension applies to powers of any nonnegative integral series with constant term one. We also verify Hanna's three nonintegral comparison series and correct the exponential cross-reference in A181079.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "abb48f723fe221da235c625800ba0d2ca1755296",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/abb48f723fe221da235c625800ba0d2ca1755296/D5/S1/Recurrence/Algebraic/HannaA181080Integrality.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 89530,
+      "sha256": "3d543dd925e0538c57b559fbc432ffdfaca7f9c41b8c8cc9fa2af80598a4378e",
+      "url": "/api/v1/collected-papers/hanna-a181080-integrality/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-22T15:30:13.074747022Z",
+    "record": "hanna-a181080-integrality",
+    "repository_name": "hanna-a181080-integrality",
+    "source": {
+      "bytes": 16697,
+      "sha256": "5224bbb10b7fc6365983eb6182c02e615ccb594666b388b84c11a9591a8a7d77",
+      "url": "/api/v1/collected-papers/hanna-a181080-integrality/files/source?version=2"
+    },
+    "title": "Proof of Hanna's conjecture in OEIS A181080, COMMENTS, first line: integrality and binomial-power companions",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-22T15:30:13.074747022Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "hanna-a181080-integrality"
+  }
+}

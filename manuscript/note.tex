@@ -1,0 +1,417 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks,breaklinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\vp}{v_p}
+\title{Proof of Hanna's conjecture in OEIS A181080,\\COMMENTS, first line:\\integrality and binomial-power companions}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{8 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove Paul D. Hanna's integrality conjecture in OEIS A181080,
+COMMENTS, first line (2 October 2010), for the series specified in NAME:
+\[
+ \exp\!\left(\sum_{n\geq1}\sum_{k=0}^n\binom nk^{n-k+1}\frac{x^{n+k}}n\right)
+\]
+has integer coefficients.
+Prime-scaling congruences for binomial coefficients imply Dold congruences for
+its logarithmic derivative. The same argument proves the related assertions
+for A181070, A181074, A181076, A181078, A181082, A181084 and A166894,
+and gives integer logarithmic sequences in all eight cases. A linear-exponent
+extension applies to powers of any nonnegative integral series with constant
+term one. We also verify Hanna's three nonintegral comparison series and
+correct the exponential cross-reference in A181079.
+\end{abstract}
+
+\section{The conjecture and the integrality criterion}
+Hanna's entry A181080~\cite{H80} states, ``Conjecture: this sequence consists
+entirely of integers.'' Its NAME specifies the formal series
+\begin{equation}\label{eq:main}
+ A(x)=\exp L(x),\qquad
+ L(x)=\sum_{n\geq1}\sum_{k=0}^n\frac{\binom nk^{n-k+1}}{n}x^{n+k}
+ \quad\text{in }x\Q[[x]].
+\end{equation}
+Every coefficient is a finite sum, so all operations below are formal;
+analytic convergence is unnecessary.
+\begin{theorem}\label{thm:main}
+The series $A(x)$ in \eqref{eq:main} belongs to $1+x\Z[[x]]$.
+\end{theorem}
+The relevant standard framework is the equivalence between Dold congruences,
+integral M\"obius transforms and integral Euler products; see
+Byszewski, Graff and Ward~\cite[Definition 2.1, Theorem 2.5 and Lemma 2.6]{BGW}.
+Moree's Witt-transform theorem~\cite[Theorems 2 and 4(2)]{Moree}
+is an earlier formal-series integrality result. These general frameworks
+provide the Euler-product mechanism; the variable-exponent congruences
+needed for Hanna's arrays are established below.
+We include the needed direction
+to specify exactly how the congruences give integrality.
+For a prime $p$ and positive integer $n$, $\vp(n)$ denotes the exponent of $p$ in $n$.
+
+\begin{lemma}\label{lem:dold}
+Suppose integers $c_m$, $m\geq1$, satisfy
+\begin{equation}\label{eq:dold}
+ c_{pm}\equiv c_m\pmod{p^{\vp(m)+1}}
+ \qquad(p\text{ prime},\ m\geq1).
+\end{equation}
+Then $\exp(\sum_{m\geq1}c_mx^m/m)$ has integer coefficients.
+\end{lemma}
+\begin{proof}
+Put $b_j=j^{-1}\sum_{d\mid j}\mu(d)c_{j/d}$, where $\mu$ is the M\"obius function.
+For $j=p^a u$, $a\geq1$, $p\nmid u$, the numerator is
+\[
+ \sum_{d\mid u}\mu(d)\bigl(c_{p^a u/d}-c_{p^{a-1}u/d}\bigr),
+\]
+which is divisible by $p^a$ by \eqref{eq:dold}. This holds for every prime
+power dividing $j$, hence $b_j\in\Z$.
+M\"obius inversion gives $c_m=\sum_{j\mid m}j b_j$, and therefore
+\[
+ \exp\!\left(\sum_{m\geq1}\frac{c_m}{m}x^m\right)
+   =\prod_{j\geq1}(1-x^j)^{-b_j}\in1+x\Z[[x]].
+\]
+Each factor has integral coefficients for every integer $b_j$; the product
+is well defined coefficient by coefficient.
+\end{proof}
+
+\section{Two prime-scaling lemmas}
+\begin{lemma}\label{lem:coeff}
+For $U(t)\in\Z[[t]]$, write $B(n,k)=[t^k]U(t)^n$. For $n\geq1$, $k\geq0$
+and every prime $p$,
+\begin{equation}\label{eq:coeff}
+ n\mid kB(n,k),\qquad
+ B(pn,pk)\equiv B(n,k)\pmod{p^{\vp(n)+1}}.
+\end{equation}
+In particular, these statements hold for $B(n,k)=\binom nk$ and
+$B(n,k)=\binom{n+k-1}{k}$.
+\end{lemma}
+\begin{proof}
+The identity $(U^n)'=nU^{n-1}U'$ gives the divisibility by taking the
+coefficient of $t^{k-1}$; for $k=0$ it is immediate.
+The Frobenius identity modulo $p$ gives
+$U(t)^p\equiv U(t^p)\pmod p$.
+If $R\equiv S\pmod{p^s}$, $s\geq1$, the binomial theorem implies
+$R^p\equiv S^p\pmod{p^{s+1}}$: the intermediate terms acquire an extra
+factor $p$, and $sp\geq s+1$ for the last term.
+Write $n=p^a u$, $p\nmid u$. Applying this observation $a$ times and then
+raising to the $u$th power yields
+$U(t)^{pn}\equiv U(t^p)^n\pmod{p^{a+1}}$.
+Taking coefficients of $t^{pk}$ proves \eqref{eq:coeff}.
+The final assertions use $U=1+t$ and $U=(1-t)^{-1}$, respectively.
+\end{proof}
+
+\begin{lemma}\label{lem:exponent}
+Let $n\geq1$, $b,t\geq0$ be integers with $n\mid tb$. Then
+\begin{equation}\label{eq:exponent}
+ b^{pt+1}\equiv b^{t+1}\pmod{p^{\vp(n)+1}}
+ \quad(p\text{ prime}).
+\end{equation}
+Also, if $e\geq n$ and $n\mid eb$, then
+\begin{equation}\label{eq:largeexponent}
+ b^{pe}\equiv b^e\pmod{p^{\vp(n)+1}}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write $a=\vp(n)$. For \eqref{eq:exponent}, the cases $t=0$ and $b=0$ are
+immediate. If $p\nmid b$, the divisibility gives $p^a\mid t$.
+Euler's theorem modulo $p^{a+1}$ applies, since the two exponents differ
+by $(p-1)t$, a multiple of $p^a(p-1)$.
+If $p\mid b$, put $s=\vp(b)\geq1$. Then
+$a\leq\vp(t)+s$, while $t\geq\vp(t)+1$ implies
+$(t+1)s\geq\vp(t)+s+1\geq a+1$.
+Both powers in \eqref{eq:exponent} are thus divisible by $p^{a+1}$.
+For \eqref{eq:largeexponent}, $b=0$ is immediate. In the unit case,
+$p^a\mid e$ and the same Euler argument applies.
+Otherwise $e\vp(b)\geq n\geq p^a\geq a+1$, so both powers again vanish
+modulo $p^{a+1}$. The inequality $p^a\geq a+1$ follows by induction on $a$.
+\end{proof}
+
+\section{From an array to an integral exponential}
+\begin{lemma}\label{lem:array}
+Let $F(n,k)\in\Z$ for $n\geq1$, $k\geq0$. Suppose
+\begin{equation}\label{eq:array}
+ n\mid kF(n,k),\qquad
+ F(pn,pk)\equiv F(n,k)\pmod{p^{\vp(n)+1}}
+\end{equation}
+for every prime $p$. Then
+$\exp(\sum_{n\geq1,k\geq0}F(n,k)x^{n+k}/n)\in1+x\Z[[x]]$.
+\end{lemma}
+\begin{proof}
+The first condition makes
+$T(n,k)=(n+k)F(n,k)/n$ an integer. Define
+\[
+ c_m=\sum_{n=1}^m T(n,m-n).
+\]
+These are exactly $m$ times the logarithm coefficients.
+Fix $p$ and $m\geq1$. In $c_{pm}$, terms whose first index $n$ is not
+divisible by $p$ vanish modulo $p^{\vp(m)+1}$: indeed
+$nT(n,pm-n)=pmF(n,pm-n)$ and $n$ is a unit modulo that power of $p$.
+Pair each remaining term with $T(n,m-n)$ in $c_m$. Their difference is
+\[
+ T(pn,p(m-n))-T(n,m-n)
+   =\frac mn\bigl(F(pn,p(m-n))-F(n,m-n)\bigr).
+\]
+By the second condition its $p$-adic valuation is at least
+$\vp(m)-\vp(n)+(\vp(n)+1)=\vp(m)+1$.
+The displayed difference is an integer; thus this valuation bound is an
+ordinary integer divisibility statement. A zero difference satisfies it as well.
+Summing proves \eqref{eq:dold}, so Lemma~\ref{lem:dold} applies.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+For $0\leq k\leq n$, put $B=\binom nk$ and $F(n,k)=B^{n-k+1}$;
+put $F(n,k)=0$ for $k>n$. Since $n\mid kB$, we have $n\mid kF(n,k)$.
+Also $n\mid(n-k)B$, because $n\mid nB-kB$.
+For a prime $p$, set $q=p^{\vp(n)+1}$. Lemma~\ref{lem:coeff} gives
+$\binom{pn}{pk}\equiv B\pmod q$, so for $k\leq n$,
+\[
+ F(pn,pk)\equiv B^{p(n-k)+1}
+   \equiv B^{n-k+1}=F(n,k)\pmod q,
+\]
+where the second step uses Lemma~\ref{lem:exponent} with $t=n-k$.
+For $k>n$ both sides are zero. Lemma~\ref{lem:array} now proves the theorem.
+\end{proof}
+
+\section{Linear exponents and companion entries}
+\begin{corollary}\label{cor:linear}
+Let $U(t)\in\Z_{\geq0}[[t]]$, $U(0)=1$, and put
+$B(n,k)=[t^k]U(t)^n$. The series
+\[
+ \exp\!\left(\sum_{n\geq1,k\geq0}
+ B(n,k)^{rn+sk+\delta}\frac{x^{n+k}}n\right)
+\]
+has integer coefficients in each of the following ranges of integer parameters:
+\[
+\begin{array}{c|c}
+\delta\geq1 & r,s\geq0\\
+\delta=0 & r\geq1,\ s\geq0\\
+\delta=-1 & r,s\geq1.
+\end{array}
+\]
+All exponents are nonnegative. In the third range the exponent can vanish
+only at $n=1,k=0,r=1$, where $B(n,0)=1$.
+\end{corollary}
+\begin{proof}
+Write $u=rn+sk$ and $B=B(n,k)$. Lemma~\ref{lem:coeff} gives
+$n\mid uB$. For $\delta\geq1$, multiply \eqref{eq:exponent}, with
+$t=u$, by $B^{\delta-1}$. For $\delta=0$, use
+\eqref{eq:largeexponent} with $e=u\geq n$.
+In both cases, first replace $B(pn,pk)$ by $B$ modulo
+$p^{\vp(n)+1}$ using Lemma~\ref{lem:coeff}.
+For $\delta=-1$, $k=0$ gives $B=1$ and is immediate. If $k>0$, then
+$u-1\geq n$. When $p\mid B$ and $B>0$, both
+$B^{pu-1}$ and $B^{u-1}$ vanish modulo $p^{\vp(n)+1}$,
+since $n\geq p^{\vp(n)}\geq\vp(n)+1$; when $B=0$ both are zero.
+When $p\nmid B$, $n\mid uB$ implies $p^{\vp(n)}\mid u$,
+so Euler's theorem applies to the exponent difference $(p-1)u$.
+Thus the second condition of \eqref{eq:array} holds in all three ranges.
+The first follows from $n\mid kB$, because the exponent is positive
+unless $k=0$. Lemma~\ref{lem:array} proves the claim.
+\end{proof}
+
+\begin{corollary}\label{cor:siblings}
+The seven companion exponentials in Table~\ref{tab:families} have
+integer coefficients. In each of its eight rows the sequence
+$c_m=m[x^m]\log A(x)$ is the indicated integer sequence and satisfies
+\eqref{eq:dold}.
+\end{corollary}
+\begin{proof}
+For A181070~\cite{H70}, take $B=\binom nk$ and $F=B^{k+1}$,
+zero outside $k\leq n$. Use \eqref{eq:exponent} with $t=k$.
+For A181074~\cite{H74}, use $B=\binom{n+k-1}{k}$ and $F=B^{k+1}$
+for all $k\geq0$; Lemma~\ref{lem:coeff} applies with $U=(1-t)^{-1}$,
+and the same exponent argument proves \eqref{eq:array}.
+For A166894~\cite{H894} and A181082~\cite{H82}, use $B=\binom nk$
+with exponents $e=n$ and $e=n+k$, respectively, and set $F=0$ when $k>n$.
+Both exponents satisfy $e\geq n$ and $n\mid eB$, so
+\eqref{eq:largeexponent} and Lemma~\ref{lem:coeff} give the second
+condition of \eqref{eq:array}. The first follows from $n\mid kB$ and $e\geq1$.
+Lemma~\ref{lem:array} proves these four assertions.
+For A181076 and A181078~\cite{H76,H78}, use
+$B=\binom{n+k-1}{k}$ with exponents $n$ and $n+k-1$, respectively;
+Corollary~\ref{cor:linear} applies with $(r,s,\delta)=(1,0,0)$
+and $(1,1,-1)$. For A181084~\cite{H84}, use $B=\binom nk$
+and $(r,s,\delta)=(1,1,1)$, with zero values for $k>n$.
+Collecting terms of degree $m$ in \eqref{eq:main} gives
+\begin{equation}\label{eq:ghost}
+ c_m=\sum_{k=0}^{\lfloor m/2\rfloor}
+       \frac{m}{m-k}\binom{m-k}{k}^{m-2k+1},
+\end{equation}
+the logarithm formula of A181081~\cite{H81}. For every other row the same
+substitution $n=m-k$ gives
+\[
+ c_m=\sum_k\frac{m}{m-k}\,B(m-k,k)^{e(m-k,k)}.
+\]
+For binomial rows the range is $0\leq k\leq\lfloor m/2\rfloor$;
+for negative-binomial rows it is $0\leq k\leq m-1$, and their base becomes
+$\binom{m-1}{k}$. These are exactly the NAME or L.g.f. formulas of the
+logarithmic entries in Table~\ref{tab:families}~\cite{Hlogs}.
+Lemma~\ref{lem:array} proves their integrality and Dold congruences.
+\end{proof}
+
+\begin{table}[ht]
+\centering\small
+\renewcommand{\arraystretch}{1.65}
+\begin{tabular}{@{}llll@{}}\toprule
+Exponential & $B(n,k)$ & $e(n,k)$ & $c_m$ entry\\\midrule
+A181080 & $\binom nk$ & $n-k+1$ & A181081\\
+A181070 & $\binom nk$ & $k+1$ & A181071\\
+A166894 & $\binom nk$ & $n$ & A166895\\
+A181082 & $\binom nk$ & $n+k$ & A181083\\
+A181084 & $\binom nk$ & $n+k+1$ & A181085\\
+A181074 & $\binom{n+k-1}{k}$ & $k+1$ & A181075\\
+A181076 & $\binom{n+k-1}{k}$ & $n$ & A181077\\
+A181078 & $\binom{n+k-1}{k}$ & $n+k-1$ & A181079\\\bottomrule
+\end{tabular}
+\caption{In every row, $A(x)=\exp(\sum B(n,k)^{e(n,k)}x^{n+k}/n)$
+and $c_m=m[x^m]\log A(x)$. Binomial rows have $0\leq k\leq n$;
+negative-binomial rows have $k\geq0$.}\label{tab:families}
+\end{table}
+
+\section{Comparison series and source coverage}
+The COMMENTS fields of A181080, A181070 and A181074 distinguish series with
+the exponent decreased by one. We confirm their stated nonintegrality,
+rather than contradicting an integrality assertion about them.
+For $\widetilde A=\exp(\sum_{m\geq1}\widetilde c_m x^m/m)
+=\sum_{m\geq0}\widetilde a_m x^m$, coefficient comparison in
+$x\widetilde A'=\widetilde A\sum_{m\geq1}\widetilde c_m x^m$ gives
+\[
+ \widetilde a_0=1,\qquad
+ m\widetilde a_m=\sum_{j=1}^m\widetilde c_j\widetilde a_{m-j}.
+\]
+Direct finite sums from the three specified logarithms give the following
+exact values; the recurrence then gives the last column.
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}\toprule
+Comparison in & $(\widetilde c_1,\ldots,\widetilde c_6)$ & $\widetilde a_6$\\\midrule
+A181080, exponent $n-k$ & $(1,3,4,15,86,807)$ & $327/2$\\
+A181070, exponent $k$ & $(1,3,4,7,21,63)$ & $45/2$\\
+A181074, exponent $k$ & $(1,3,7,27,231,4038)$ & $1481/2$\\\bottomrule
+\end{tabular}
+\end{center}
+For each row, degrees zero through five are integral, so degree six is the
+first obstruction. The convention $0^0$ does not arise in the bounded sums,
+since $\binom nk>0$ for $0\leq k\leq n$.
+
+There is one cross-reference to correct. The FORMULA field of A181079
+states, ``Logarithmic derivative of A181076.'' The correct exponential is
+A181078, as its L.g.f. and EXAMPLE already specify. Indeed, Table~\ref{tab:families}
+gives $xA'_{181078}(x)/A_{181078}(x)=\sum_{m\geq1}c_mx^m$
+with $c_4=95$, whereas $xA'_{181076}(x)/A_{181076}(x)$ has coefficient
+$59$ at $x^4$ (A181077). This both disproves the printed identification
+and supplies its corrected identity. In A181081, the typographical
+\texttt{n-2k*+1} in NAME is read as $n-2k+1$ by its L.g.f. and EXAMPLE,
+which agree with \eqref{eq:ghost}.
+
+Hanna's first COMMENTS line in each of A181070, A181074, A181076,
+A181078, A181082 and A181084 repeats the integrality conjecture quoted
+in Section~1. A166894 instead asserts ``an integer series in x'' in NAME.
+The following table separates these source assertions from additional
+consequences and from unrelated or uncovered items.
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.31\linewidth}>{\raggedright\arraybackslash}p{.64\linewidth}@{}}\toprule
+Source and exact locator & Coverage\\\midrule
+A181080, NAME and first COMMENTS & Proved: integrality, Theorem~\ref{thm:main}.\\
+A181070, A181074, A181076, A181078, A181082, A181084; NAME and first COMMENTS
+ & Proved: the six integrality conjectures, Corollary~\ref{cor:siblings}.\\
+A166894, NAME & Proved: the asserted integrality.\\
+Eight logarithmic entries in Table~\ref{tab:families}, NAME and L.g.f./EXAMPLE
+ & Formulas verified; integrality proved. Dold congruences are not posed;
+ proved here for all eight.\\
+A181079, FORMULA, second sentence & Refuted-and-corrected: replace A181076 by
+A181078; coefficients $59\ne95$ at degree four.\\
+A181080, A181070, A181074; COMMENTS, comparison formulas
+ & Proved: the stated nonintegrality, witnessed at degree six.\\
+Corollary~\ref{cor:linear} & Not posed; proved: the linear-exponent families.\\
+A166895, FORMULA, limit (Kotesovec, 20 November 2024)
+ & Not covered: the separate asymptotic formula; it is not an integrality question.\\
+A181072 and A181073, NAME & Not covered: unrelated random-walk and permutation
+entries appearing among variant cross-references~\cite{Hmisc}; no identification
+with these exponentials is asserted.\\\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Mathematical and formal scope}
+The proofs above establish all covered statements without finite premises.
+The pinned Lean declarations at revision \texttt{abb48f7} have the following
+scopes; the common namespace prefix is
+\texttt{D5.S1.Recurrence.Algebraic.}
+\begin{itemize}
+\raggedright
+\item \href{https://github.com/the-omega-institute/trureturing/blob/abb48f723fe221da235c625800ba0d2ca1755296/D5/S1/Recurrence/Algebraic/HannaA181080Integrality.lean}{\texttt{HannaA181080Integrality.lean}}:
+\texttt{HannaA181080Integrality.result} proves integrality in every degree
+for the literal bounded rational logarithm in \eqref{eq:main} and its formal exponential.
+\item \href{https://github.com/the-omega-institute/trureturing/blob/abb48f723fe221da235c625800ba0d2ca1755296/D5/S1/Recurrence/Algebraic/HannaA181070Integrality.lean}{\texttt{HannaA181070Integrality.lean}}:
+\texttt{HannaA181070Integrality.result} proves the A181070 assertion;
+\texttt{integralGeneric} proves the nonnegative-array version of
+Lemma~\ref{lem:array} for the diagonal logarithm, and
+\texttt{literalBounded}/\texttt{literalUnbounded} identify its coefficient formulas.
+\item \href{https://github.com/the-omega-institute/trureturing/blob/abb48f723fe221da235c625800ba0d2ca1755296/D5/S1/Recurrence/Algebraic/HannaA181074Integrality.lean}{\texttt{HannaA181074Integrality.lean}}:
+\texttt{HannaA181074Integrality.result} proves integrality for the literal
+negative-binomial logarithm with exponent $k+1$.
+\end{itemize}
+These three named \texttt{result} declarations correspond to A181080,
+A181070 and A181074, respectively. The other five exponentials, the
+linear-exponent extension, all eight logarithmic consequences, and the
+source corrections are covered by the written arguments above.
+
+The accompanying \texttt{verify.py} checks coefficients through degree 48
+for all eight integral exponentials by a differential recurrence and Euler
+products, and through degree 16 by the direct exponential sum. It checks
+the two array conditions for $1\leq n\leq24$, $0\leq k\leq24$ and
+$p\in\{2,3,5,7,11,13\}$, and Dold congruences when $pm\leq48$ for these
+primes. It also checks the eight logarithmic formulas and the linear-exponent
+families on three integral series and seven parameter choices through degree 12,
+with prime-scaling checks for $1\leq n\leq6$, $0\leq k\leq12$ and
+$p\in\{2,3,5\}$. These are finite checks, distinct from the all-degree proofs.
+
+\begin{thebibliography}{99}\small\raggedright
+\bibitem{H80} P. D. Hanna, OEIS A181080, 2 October 2010,
+NAME, COMMENTS and CROSSREFS, \url{https://oeis.org/A181080}.
+\bibitem{H70} P. D. Hanna, OEIS A181070, 2 October 2010,
+NAME and COMMENTS, \url{https://oeis.org/A181070}.
+\bibitem{H74} P. D. Hanna, OEIS A181074, 2 October 2010,
+NAME and COMMENTS, \url{https://oeis.org/A181074}.
+\bibitem{H894} P. D. Hanna, OEIS A166894, 23 November 2009,
+NAME, \url{https://oeis.org/A166894}.
+\bibitem{H82} P. D. Hanna, OEIS A181082, 2 October 2010,
+NAME and COMMENTS, \url{https://oeis.org/A181082}.
+\bibitem{H81} P. D. Hanna, OEIS A181081, 2 October 2010,
+FORMULA and examples, \url{https://oeis.org/A181081}.
+\bibitem{H76} P. D. Hanna, OEIS A181076, 2 October 2010,
+NAME, first COMMENTS and CROSSREFS, \url{https://oeis.org/A181076}.
+\bibitem{H78} P. D. Hanna, OEIS A181078, 3 October 2010,
+NAME, first COMMENTS and CROSSREFS, \url{https://oeis.org/A181078}.
+\bibitem{H84} P. D. Hanna, OEIS A181084, dated 28 October 2010,
+NAME and first COMMENTS, \url{https://oeis.org/A181084}.
+\bibitem{Hlogs} P. D. Hanna, logarithmic companion entries, NAME and
+L.g.f./EXAMPLE: \url{https://oeis.org/A166895},
+\url{https://oeis.org/A181071}, \url{https://oeis.org/A181075},
+\url{https://oeis.org/A181077}, \url{https://oeis.org/A181079},
+\url{https://oeis.org/A181083}, \url{https://oeis.org/A181085}.
+The separate limit formula in A166895 is attributed there to
+V. Kotesovec, 20 November 2024.
+\bibitem{Hmisc} OEIS A181072 and A181073, NAME,
+\url{https://oeis.org/A181072}, \url{https://oeis.org/A181073}.
+\bibitem{Moree} P. Moree, \emph{The formal series Witt transform},
+Discrete Math. \textbf{295} (2005), 143--160,
+\href{https://doi.org/10.1016/j.disc.2005.03.004}{doi:10.1016/j.disc.2005.03.004};
+\href{https://arxiv.org/abs/math/0311194}{arXiv:math/0311194}, v2 (31 March 2005).
+\bibitem{BGW} J. Byszewski, G. Graff and T. Ward,
+\emph{Dold sequences, periodic points, and dynamics},
+Bull. Lond. Math. Soc. \textbf{53} (2021), 1263--1298.
+\href{https://doi.org/10.1112/blms.12531}{doi:10.1112/blms.12531};
+\href{https://arxiv.org/abs/2007.04031}{arXiv:2007.04031}.
+\end{thebibliography}
+\bigskip\noindent\small
+\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+\end{document}

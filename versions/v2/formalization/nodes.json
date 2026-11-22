@@ -1,0 +1,291 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:hanna-a181080-integrality:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "abb48f723fe221da235c625800ba0d2ca1755296",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/abb48f723fe221da235c625800ba0d2ca1755296/D5/S1/Recurrence/Algebraic/HannaA181080Integrality.lean"
+      },
+      "lineage": "collected:hanna-a181080-integrality:s1",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\vp": "v_p"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-a181080-integrality",
+      "scope": "in_scope",
+      "statement": "The series $A(x)$ in \\eqref{eq:main} belongs to $1+x\\Z[[x]]$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of Hanna's conjecture in OEIS A181080, COMMENTS, first line: integrality and binomial-power companions",
+      "toolchain": null,
+      "version": 2,
+      "work": "hanna-a181080-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:hanna-a181080-integrality:2:s2",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "abb48f723fe221da235c625800ba0d2ca1755296",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/abb48f723fe221da235c625800ba0d2ca1755296/D5/S1/Recurrence/Algebraic/HannaA181080Integrality.lean"
+      },
+      "lineage": "collected:hanna-a181080-integrality:s2",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\vp": "v_p"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-a181080-integrality",
+      "scope": "in_scope",
+      "statement": "Suppose integers $c_m$, $m\\geq1$, satisfy\n\\begin{equation}\n c_{pm}\\equiv c_m\\pmod{p^{\\vp(m)+1}}\n \\qquad(p\\text{ prime},\\ m\\geq1).\n\\end{equation}\nThen $\\exp(\\sum_{m\\geq1}c_mx^m/m)$ has integer coefficients.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of Hanna's conjecture in OEIS A181080, COMMENTS, first line: integrality and binomial-power companions",
+      "toolchain": null,
+      "version": 2,
+      "work": "hanna-a181080-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:hanna-a181080-integrality:2:s3",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "abb48f723fe221da235c625800ba0d2ca1755296",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/abb48f723fe221da235c625800ba0d2ca1755296/D5/S1/Recurrence/Algebraic/HannaA181080Integrality.lean"
+      },
+      "lineage": "collected:hanna-a181080-integrality:s3",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\vp": "v_p"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-a181080-integrality",
+      "scope": "in_scope",
+      "statement": "For $U(t)\\in\\Z[[t]]$, write $B(n,k)=[t^k]U(t)^n$. For $n\\geq1$, $k\\geq0$\nand every prime $p$,\n\\begin{equation}\n n\\mid kB(n,k),\\qquad\n B(pn,pk)\\equiv B(n,k)\\pmod{p^{\\vp(n)+1}}.\n\\end{equation}\nIn particular, these statements hold for $B(n,k)=\\binom nk$ and\n$B(n,k)=\\binom{n+k-1}{k}$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of Hanna's conjecture in OEIS A181080, COMMENTS, first line: integrality and binomial-power companions",
+      "toolchain": null,
+      "version": 2,
+      "work": "hanna-a181080-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:hanna-a181080-integrality:2:s4",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "abb48f723fe221da235c625800ba0d2ca1755296",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/abb48f723fe221da235c625800ba0d2ca1755296/D5/S1/Recurrence/Algebraic/HannaA181080Integrality.lean"
+      },
+      "lineage": "collected:hanna-a181080-integrality:s4",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\vp": "v_p"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-a181080-integrality",
+      "scope": "in_scope",
+      "statement": "Let $n\\geq1$, $b,t\\geq0$ be integers with $n\\mid tb$. Then\n\\begin{equation}\n b^{pt+1}\\equiv b^{t+1}\\pmod{p^{\\vp(n)+1}}\n \\quad(p\\text{ prime}).\n\\end{equation}\nAlso, if $e\\geq n$ and $n\\mid eb$, then\n\\begin{equation}\n b^{pe}\\equiv b^e\\pmod{p^{\\vp(n)+1}}.\n\\end{equation}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of Hanna's conjecture in OEIS A181080, COMMENTS, first line: integrality and binomial-power companions",
+      "toolchain": null,
+      "version": 2,
+      "work": "hanna-a181080-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:hanna-a181080-integrality:2:s5",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "abb48f723fe221da235c625800ba0d2ca1755296",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/abb48f723fe221da235c625800ba0d2ca1755296/D5/S1/Recurrence/Algebraic/HannaA181080Integrality.lean"
+      },
+      "lineage": "collected:hanna-a181080-integrality:s5",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\vp": "v_p"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-a181080-integrality",
+      "scope": "in_scope",
+      "statement": "Let $F(n,k)\\in\\Z$ for $n\\geq1$, $k\\geq0$. Suppose\n\\begin{equation}\n n\\mid kF(n,k),\\qquad\n F(pn,pk)\\equiv F(n,k)\\pmod{p^{\\vp(n)+1}}\n\\end{equation}\nfor every prime $p$. Then\n$\\exp(\\sum_{n\\geq1,k\\geq0}F(n,k)x^{n+k}/n)\\in1+x\\Z[[x]]$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of Hanna's conjecture in OEIS A181080, COMMENTS, first line: integrality and binomial-power companions",
+      "toolchain": null,
+      "version": 2,
+      "work": "hanna-a181080-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:hanna-a181080-integrality:2:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "abb48f723fe221da235c625800ba0d2ca1755296",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/abb48f723fe221da235c625800ba0d2ca1755296/D5/S1/Recurrence/Algebraic/HannaA181080Integrality.lean"
+      },
+      "lineage": "collected:hanna-a181080-integrality:s6",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\vp": "v_p"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-a181080-integrality",
+      "scope": "in_scope",
+      "statement": "Let $U(t)\\in\\Z_{\\geq0}[[t]]$, $U(0)=1$, and put\n$B(n,k)=[t^k]U(t)^n$. The series\n\\[\n \\exp\\!\\left(\\sum_{n\\geq1,k\\geq0}\n B(n,k)^{rn+sk+\\delta}\\frac{x^{n+k}}n\\right)\n\\]\nhas integer coefficients in each of the following ranges of integer parameters:\n\\[\n\\begin{array}{c|c}\n\\delta\\geq1 & r,s\\geq0\\\\\n\\delta=0 & r\\geq1,\\ s\\geq0\\\\\n\\delta=-1 & r,s\\geq1.\n\\end{array}\n\\]\nAll exponents are nonnegative. In the third range the exponent can vanish\nonly at $n=1,k=0,r=1$, where $B(n,0)=1$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of Hanna's conjecture in OEIS A181080, COMMENTS, first line: integrality and binomial-power companions",
+      "toolchain": null,
+      "version": 2,
+      "work": "hanna-a181080-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s7",
+      "contributor": null,
+      "identity": "collected:hanna-a181080-integrality:2:s7",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "abb48f723fe221da235c625800ba0d2ca1755296",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/abb48f723fe221da235c625800ba0d2ca1755296/D5/S1/Recurrence/Algebraic/HannaA181080Integrality.lean"
+      },
+      "lineage": "collected:hanna-a181080-integrality:s7",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\vp": "v_p"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-a181080-integrality",
+      "scope": "in_scope",
+      "statement": "The seven companion exponentials in Table~\\ref{tab:families} have\ninteger coefficients. In each of its eight rows the sequence\n$c_m=m[x^m]\\log A(x)$ is the indicated integer sequence and satisfies\n\\eqref{eq:dold}.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of Hanna's conjecture in OEIS A181080, COMMENTS, first line: integrality and binomial-power companions",
+      "toolchain": null,
+      "version": 2,
+      "work": "hanna-a181080-integrality"
+    }
+  ]
+}

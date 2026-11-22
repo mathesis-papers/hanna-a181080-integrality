@@ -1,0 +1,25 @@
+{
+  "format": "SHA256 source-member manifest",
+  "members": {
+    "README.md": {
+      "bytes": 5003,
+      "sha256": "ef4d25272a54f30122c7151d0ee4628df0c5ad96b6a825bad016218e53c8e8ca"
+    },
+    "checks.json": {
+      "bytes": 8738,
+      "sha256": "8283511ba3a8374dca6c40b1da5131e603c674a2082c5d1285d87c61c2913dbf"
+    },
+    "metadata.json": {
+      "bytes": 1946,
+      "sha256": "a35cf7ea08f06527c6c27f5693da6ddfacbd5539ee66ea2a0ccd5e4b4cdd2c6e"
+    },
+    "note.tex": {
+      "bytes": 19992,
+      "sha256": "67b9de0ff16eecca3ff56ed7134325ee1611c7b2b3161b1c8d668b2fd0045af9"
+    },
+    "verify.py": {
+      "bytes": 11792,
+      "sha256": "4a481d492ed32ddd4d4858673eca9db03fa34be082067a4a278d4ac5be656f44"
+    }
+  }
+}
